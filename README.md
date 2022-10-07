@@ -2,7 +2,7 @@
 
 #### **Cadastro de usuários ( comum e administrador ) e alunos de uma faculdade fictícia.**
 
-#### Projeto de CRUD orientado ao objeto 
+#### Projeto de CRUD orientado ao objeto
 
 <br>
 
@@ -32,7 +32,6 @@ yarn dev - para rodar.
 
 <br>
 
-
   <summary>👨‍💼 Regras de negocio:</summary>
 
   <details>
@@ -44,7 +43,6 @@ yarn dev - para rodar.
       4: Alunos podem cadastrar uma imagem/avatar em seu perfil. <br>
       5: Geração de email e matrícula automatizados e padronizados( matrícula: AAAAPUUCCCSSS-V | e-mail: ...@duoimpar.com ) para alunos. <br>
   </details>
-
 
   <br>
 
@@ -63,14 +61,13 @@ yarn dev - para rodar.
 
 ## Autenticação:
 
-**Realizar login através do endpoint /auth, será gerado um TOKEN de 72 horas**  
+**Realizar login através do endpoint /auth, será gerado um TOKEN de 72 horas**
 
 <p><b><i> (contém algumas demonstrações de exceptions) </i></b></p>
 
  <div align="center">
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194180614-d955387f-6098-49b8-af14-bab2b1eaac1a.gif">
 </div>
-
 
 <br>
 
@@ -81,7 +78,6 @@ yarn dev - para rodar.
 <div align="center">
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194191594-70c52003-a44b-44d1-b87d-b5c3d5152561.gif">
 </div>
-
 
 <br>
 
@@ -100,7 +96,6 @@ yarn dev - para rodar.
 ##### status 400: Bad request
 
 <p> Acontece quando há tentativa de criar um usuário administrador pela rota post http://localhost:6558/users <p>
-
 
 ```
 {
@@ -122,12 +117,11 @@ yarn dev - para rodar.
 
 <br>
 
-## Vinculando foto a um aluno: 
+## Vinculando foto a um aluno:
 
 <div align="center">
   <img width="800px" src="https://user-images.githubusercontent.com/87536346/194194390-b112e405-8b02-4e04-909f-171bf256ba0a.gif">
 </div>
-
 
 <br>
 
