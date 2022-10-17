@@ -12,11 +12,11 @@ class TokenController {
 
       const user = await UserModel.findOne({ where: { email } });
       if (!user) {
-        return res.status(404).json({ response: "Usuário não econtrado." });
+        return res.status(404).json({ response: "Credências inválidas." });
       }
 
       if (!user.passwordIsValid(password)) {
-        return res.status(401).json({ response: "Credências inválidas" });
+        return res.status(401).json({ response: "Credências inválidas." });
       }
       const { id, username } = user;
       const token = jwt.sign(
