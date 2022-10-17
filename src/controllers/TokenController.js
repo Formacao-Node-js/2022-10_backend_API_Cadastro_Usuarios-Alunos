@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 class TokenController {
   async store(req, res) {
     try {
-      const { email, username, password } = req.body;
+      const { email, password } = req.body;
 
       if (!email || !password) {
         return res.status(400).json({ response: "Credências inválidas." });
@@ -18,7 +18,7 @@ class TokenController {
       if (!user.passwordIsValid(password)) {
         return res.status(401).json({ response: "Credências inválidas" });
       }
-      const { id } = user;
+      const { id, username } = user;
       const token = jwt.sign(
         { id, email, username },
         process.env.TOKEN_SECRET,
@@ -27,7 +27,7 @@ class TokenController {
         }
       );
 
-      return res.status(200).json({ token });
+      return res.status(200).json({ token, user: { id, username, email } });
     } catch (err) {
       return res.status(500).json({ response: "Algo inesperado aconteceu " });
     }
